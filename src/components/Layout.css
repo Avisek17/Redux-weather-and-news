@@ -1,0 +1,135 @@
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+    padding: 18px;
+
+    background: var(--bg-color);
+
+    border-bottom:
+        1px solid var(--border-color);
+
+    transition:
+        background-color 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.navbar-brand {
+    color: var(--text-color);
+
+    font-size: 1.15rem;
+    font-weight: 800;
+
+    letter-spacing: -0.03em;
+}
+.navbar-links {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.nav-link {
+    padding: 8px 14px;
+
+    border-radius: 8px;
+
+    color: var(--muted-color);
+
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition:
+        color 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.nav-link:hover {
+    color: var(--accent-color);
+
+    background: var(--surface-color);
+}
+
+.nav-link.active {
+    color: var(--accent-color);
+
+    background: var(--surface-color);
+}
+
+.page-content {
+    margin-left: 18px;
+    /* min-height: calc(100vh - 70px); */
+}
+
+/* =========================
+   Theme Variables
+========================= */
+
+.app-layout {
+    --bg-color: #f8fafc;
+    --surface-color: #ffffff;
+    --text-color: #111827;
+    --muted-color: #64748b;
+    --border-color: #e2e8f0;
+    --accent-color: #4f46e5;
+
+    min-height: 100vh;
+
+    background: var(--bg-color);
+    color: var(--text-color);
+
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease;
+}
+
+
+/* =========================
+   Dark Theme
+========================= */
+
+.app-layout.dark {
+    --bg-color: #060612;
+    --surface-color: #1e293b;
+    --text-color: #f8fafc;
+    --muted-color: #94a3b8;
+    --border-color: #334155;
+    --accent-color: #818cf8;
+}
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+
+    margin-left: 8px;
+
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+
+    background: var(--surface-color);
+
+    color: var(--text-color);
+
+    font-size: 1rem;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.theme-toggle:hover {
+    transform: rotate(10deg);
+}
